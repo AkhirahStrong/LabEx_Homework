@@ -17,15 +17,6 @@ def add_mission(missions, mission_details, name, details):
 def update_mission(mission_details, name, key, value):
     # TODO: Implement this function
     # pass
-    
-    # Check if mission name exists
-    # If it does, update the key with the new value
-    # then replace the old value with the new one
-    # mission_details[name][key] = value
-    
-    # print(f"Mission '{name}' updated successfully.")
-    
-    
     print("UPDATE FUNCTION IS RUNNING")
     
     # Check if mission exist before updating
@@ -41,9 +32,6 @@ def update_mission(mission_details, name, key, value):
 def display_missions(missions, mission_details):
     # TODO: Implement this function
     # pass
-    # print(f"\n Missions: {missions}")
-    # print(f"\n Mission Details: {mission_details}")
-    
     if not missions:
         print("\n No missions found.")
         return
@@ -52,7 +40,7 @@ def display_missions(missions, mission_details):
     for name in missions:
         print(f"\n Mission Name: {name}")
         
-        print(f" Destination: {mission_details[name]['Destination']}")
+        print(f" Destination: {mission_details[name].get('Destination', 'N/A')}")
         
         print(f" Launch Date: {mission_details[name]['Launch Date']}")
         
